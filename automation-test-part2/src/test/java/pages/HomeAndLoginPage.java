@@ -160,6 +160,7 @@ public class HomeAndLoginPage extends RunCucumber {
 	public boolean typesProductOnSearchField(String text){
 		try{
 			utils.waitElementBePresent(searchInputField, 5000);
+			getDriver().findElement(searchInputField).clear();
 			getDriver().findElement(searchInputField).sendKeys(text);
 			return true;
 		} catch (Exception e){
