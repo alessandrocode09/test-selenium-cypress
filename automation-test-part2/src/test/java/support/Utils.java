@@ -10,11 +10,30 @@ import java.util.Random;
 public class Utils extends RunCucumber {
 
 
-	public static void waitElementBePresent(By element, Integer time) {
+	/**
+	 *
+	 * @param element
+	 * @param time
+	 */
+	public static void waitElementBeClickable(By element, Integer time) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), time);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
+	/**
+	 *
+	 * @param element
+	 * @param time
+	 */
+	public static void waitElementBePresent(By element, Integer time) {
+		WebDriverWait wait = new WebDriverWait(getDriver(), time);
+		wait.until(ExpectedConditions.presenceOfElementLocated(element));
+	}
+
+	/**
+	 *
+	 * @return
+	 */
 	public static String getRandomEmail() {
 		StringBuilder builder = new StringBuilder();
 
@@ -29,6 +48,10 @@ public class Utils extends RunCucumber {
 		return builder.toString();
 	}
 
+	/**
+	 *
+	 * @return
+	 */
 	public static String getRandomUsername() {
 		StringBuilder builder = new StringBuilder();
 

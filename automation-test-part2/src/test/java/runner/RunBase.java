@@ -2,6 +2,8 @@ package runner;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +23,15 @@ public class RunBase {
 
 		switch (browser) {
 			case "chrome":
-				driver = new ChromeDriver();
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--incognito");
+				options.addArguments("--disable-popup-blocking");
+				options.addArguments("start-maximized");
+				options.addArguments("--disable-extensions");
+				options.addArguments("--disable-notifications");
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+				driver = new ChromeDriver(options);
 				break;
 			case "firefox":
 				throw new IllegalArgumentException("Firefox browser is not supported!");

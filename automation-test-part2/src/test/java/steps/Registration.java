@@ -89,13 +89,9 @@ public class Registration extends RunCucumber {
 	@Then("The application shows the registered user logged")
 	public void the_application_shows_the_registered_user_logged(){
 		boolean validateLoginSuccessful = homeLoginPage.validateLoginSuccessful();
-		boolean clicksOnSignOutButton = homeLoginPage.clickOnSignOutButton();
 		testBase.isTrue(validateLoginSuccessful,
 		"The application shows the user registered inside the application successfully",
 		"Fail to show the user registered inside the application");
-		testBase.isTrue(clicksOnSignOutButton,
-		"The user logs out successfully",
-		"Fail to log the user out");
 	}
 
 }

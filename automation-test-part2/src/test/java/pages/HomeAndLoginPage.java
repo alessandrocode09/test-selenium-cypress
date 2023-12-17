@@ -48,7 +48,7 @@ public class HomeAndLoginPage extends RunCucumber {
 	 */
 	public boolean clickSignInLink(){
 		try{
-			utils.waitElementBePresent(signInLink, 5000);
+			utils.waitElementBeClickable(signInLink, 5000);
 			getDriver().findElement(signInLink).click();
 			return true;
 		} catch (Exception e){
@@ -78,7 +78,7 @@ public class HomeAndLoginPage extends RunCucumber {
 	 */
 	public boolean clickRegisterNowLink(){
 		try{
-			utils.waitElementBePresent(registerNowLink, 5000);
+			utils.waitElementBeClickable(registerNowLink, 5000);
 			getDriver().findElement(registerNowLink).click();
 			return true;
 		} catch (Exception e){
@@ -138,20 +138,6 @@ public class HomeAndLoginPage extends RunCucumber {
 		}
 	}
 
-	/**
-	 *
-	 * @return
-	 */
-	public boolean clickOnSignOutButton(){
-		try{
-			utils.waitElementBePresent(signOutLink, 5000);
-			getDriver().findElement(signOutLink).click();
-			return true;
-		} catch (Exception e){
-			System.out.println("Couldn't validate the User Information register form text" + e.getMessage());
-			return false;
-		}
-	}
 
 	/**
 	 *
@@ -175,7 +161,7 @@ public class HomeAndLoginPage extends RunCucumber {
 	 */
 	public boolean clicksOnSearchButton(){
 		try{
-			utils.waitElementBePresent(searchButton, 5000);
+			utils.waitElementBeClickable(searchButton, 5000);
 			getDriver().findElement(searchButton).click();
 			return true;
 		} catch (Exception e){

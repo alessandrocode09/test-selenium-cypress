@@ -6,7 +6,6 @@ import runner.RunCucumber;
 import support.Utils;
 
 public class RegisterPage extends RunCucumber {
-	public static String usernameID;
 
 	Utils utils;
 	public void HomeAndLoginPage(){

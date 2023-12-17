@@ -45,9 +45,9 @@ public class SearchResultPage extends RunCucumber {
 	 */
 	public boolean addProductToCart(){
 		try{
-			utils.waitElementBePresent(clickProductResult,5000);
+			utils.waitElementBeClickable(clickProductResult,5000);
 			getDriver().findElement(clickProductResult).click();
-			utils.waitElementBePresent(addToCart, 5000);
+			utils.waitElementBeClickable(addToCart, 5000);
 			getDriver().findElement(addToCart).click();
 			return true;
 		} catch (Exception e){

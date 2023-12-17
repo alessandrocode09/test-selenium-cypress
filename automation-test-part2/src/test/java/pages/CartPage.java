@@ -21,6 +21,8 @@ public class CartPage extends RunCucumber {
 
 	private By cartEmptyText = By.xpath("//div[contains(@id, 'Cart')]//b[contains(text(), 'Your cart is empty.')]");
 
+	private By proceedToCheckoutButton = By.xpath("//a[contains(text(), 'Proceed to Checkout')]");
+
 
 	//Actions
 
@@ -66,6 +68,22 @@ public class CartPage extends RunCucumber {
 			return true;
 		} catch (Exception e){
 			System.out.println("Couldn't validate if the shopping cart is empty" + e.getMessage());
+			return false;
+		}
+	}
+
+	/**
+	 *
+	 * @return
+	 */
+	public boolean clickOnProceedCheckout(){
+		try{
+			utils.waitElementBeClickable(proceedToCheckoutButton, 5000);
+			Assert.assertEquals(getDriver().findElement(proceedToCheckoutButton).getText(), "Proceed to Checkout");
+			getDriver().findElement(proceedToCheckoutButton).click();
+			return true;
+		} catch (Exception e){
+			System.out.println("Couldn't click on the Proceed Checkout button" + e.getMessage());
 			return false;
 		}
 	}
