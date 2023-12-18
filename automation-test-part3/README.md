@@ -17,8 +17,8 @@ Link: https://docs.cypress.io/guides/getting-started/installing-cypress
 - PATCH  - Partially Update the Created Booking
 
 - After all tests running on Google Chrome:
-<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo01.png" width="500"/>
-<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo02.pgn" width="500"/>
+<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo01.PNG" width="500"/>
+<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo02.PNG" width="500"/>
 
 - After all tests running on Terminal:
-<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo03.pgn" width="500"/>
+<img src="https://github.com/alessandrocode09/test-korber/automation-test-part3/blob/master/images/photo03.PNG" width="500"/>
