@@ -28,10 +28,29 @@ public class RunBase {
 			driver.quit();
 		}
 
+		String os = System.getProperty("os.name").toLowerCase();
+		String driverPath = "";
+
+		switch (os) {
+			case "windows 10":
+				driverPath = "../automation-test-part2/src/test/java/drivers/chromedriver.exe";
+				break;
+			case "mac os x":
+				driverPath = "../automation-test-part2/src/test/java/drivers/chromedriver_macArm64";
+				break;
+			case "linux":
+				driverPath = "../automation-test-part2/src/test/java/drivers/chromedriver_linux64";
+				break;
+			default:
+				throw new IllegalArgumentException("Unsupported operating system!");
+		}
+
 		switch (browser) {
 			case "chrome":
+				System.setProperty("webdriver.chrome.driver", driverPath);
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--incognito");
+				options.addArguments("--headless");
 				options.addArguments("--disable-popup-blocking");
 				options.addArguments("start-maximized");
 				options.addArguments("--disable-extensions");
