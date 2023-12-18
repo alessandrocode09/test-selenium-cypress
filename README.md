@@ -9,8 +9,6 @@ The zip file contains a Word document with the bug and images and contains also 
 After you clone this repository, to run the project "automation-test-part2" you will need to install:
 - Java JDK version 8
 - Must have the Chrome browser installed (version 120.0.6099.109)
-- The "chromedriver" on the directory only works for mac arm64, in case of a different operational system, please check the chromedriver on the link: https://chromedriver.chromium.org/downloads
-- Paste the new chromdrive option on the root of the project "/automation-test-part2"
 - You can see the test features on the: "/automation-test-part2/src/test/resources"
 - All tests for the project are in the "test" directory.
 
