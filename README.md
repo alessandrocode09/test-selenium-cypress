@@ -1,6 +1,10 @@
 # test-korber
 This is a code challenge proposed by Korber Digital
 
+## TestPart1-blackboxTests
+The first part of the test is inside the zip file. 
+The zip file contains a word document with the bug and images and contains also a folder with a video of the bug.
+
 ## automation-test-part2
 After you clone this repository, to run the project "automation-test-part2" you will need to install:
 - Java JDK version 8
