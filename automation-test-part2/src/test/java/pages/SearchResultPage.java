@@ -1,7 +1,7 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import runner.RunCucumber;
 import support.Utils;
 
@@ -25,8 +25,10 @@ public class SearchResultPage extends RunCucumber {
 	//Actions
 
 	/**
+	 * Validates if the search result displays the expected product.
 	 *
-	 * @return
+	 * @return {@code true} if the search result displays the expected product "Finch",
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateSearchResult(){
 		try{
@@ -40,9 +42,12 @@ public class SearchResultPage extends RunCucumber {
 	}
 
 	/**
+	 * Adds a product to the shopping cart.
 	 *
-	 * @return
+	 * @return {@code true} if the product is successfully added to the cart,
+	 *         otherwise {@code false}.
 	 */
+
 	public boolean addProductToCart(){
 		try{
 			utils.waitElementBeClickable(clickProductResult,5000);
@@ -51,7 +56,7 @@ public class SearchResultPage extends RunCucumber {
 			getDriver().findElement(addToCart).click();
 			return true;
 		} catch (Exception e){
-			System.out.println("Couldn't validate if the expected product is showing" + e.getMessage());
+			System.out.println("Couldn't add the product on the cart" + e.getMessage());
 			return false;
 		}
 	}

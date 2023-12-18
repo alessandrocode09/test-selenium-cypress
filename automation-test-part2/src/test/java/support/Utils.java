@@ -11,9 +11,10 @@ public class Utils extends RunCucumber {
 
 
 	/**
+	 * Waits for an element to be clickable within a specified time.
 	 *
-	 * @param element
-	 * @param time
+	 * @param element The locator of the element to wait for.
+	 * @param time    The maximum time to wait for the element to be clickable, in seconds.
 	 */
 	public static void waitElementBeClickable(By element, Integer time) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), time);
@@ -21,9 +22,10 @@ public class Utils extends RunCucumber {
 	}
 
 	/**
+	 * Waits for an element to be present within a specified time.
 	 *
-	 * @param element
-	 * @param time
+	 * @param element The locator of the element to wait for.
+	 * @param time    The maximum time to wait for the element to be present, in seconds.
 	 */
 	public static void waitElementBePresent(By element, Integer time) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), time);
@@ -31,8 +33,9 @@ public class Utils extends RunCucumber {
 	}
 
 	/**
+	 * Generates a random email address.
 	 *
-	 * @return
+	 * @return A randomly generated email address in the format: tst_randomNumber@mail.com.
 	 */
 	public static String getRandomEmail() {
 		StringBuilder builder = new StringBuilder();
@@ -49,8 +52,9 @@ public class Utils extends RunCucumber {
 	}
 
 	/**
+	 * Generates a random username.
 	 *
-	 * @return
+	 * @return A randomly generated username in the format: afs_randomNumber.
 	 */
 	public static String getRandomUsername() {
 		StringBuilder builder = new StringBuilder();

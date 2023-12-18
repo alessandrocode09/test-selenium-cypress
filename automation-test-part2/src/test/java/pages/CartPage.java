@@ -1,7 +1,7 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import runner.RunCucumber;
 import support.Utils;
 
@@ -27,8 +27,10 @@ public class CartPage extends RunCucumber {
 	//Actions
 
 	/**
+	 * Validates if the shopping cart is displayed.
 	 *
-	 * @return
+	 * @return {@code true} if the shopping cart is displayed with the expected title "Shopping Cart",
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateShoppingCartDisplayed(){
 		try{
@@ -42,8 +44,10 @@ public class CartPage extends RunCucumber {
 	}
 
 	/**
+	 * Clicks on the remove button for the first item in the cart.
 	 *
-	 * @return
+	 * @return {@code true} if the remove button for the first item is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickOnTheRemoveButton(){
 		try{
@@ -58,8 +62,10 @@ public class CartPage extends RunCucumber {
 	}
 
 	/**
+	 * Validates if the shopping cart is empty.
 	 *
-	 * @return
+	 * @return {@code true} if the shopping cart is empty and displays the message "Your cart is empty.",
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateShoppingCartIsEmpty(){
 		try{
@@ -73,8 +79,10 @@ public class CartPage extends RunCucumber {
 	}
 
 	/**
+	 * Clicks on the "Proceed to Checkout" button.
 	 *
-	 * @return
+	 * @return {@code true} if the "Proceed to Checkout" button is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickOnProceedCheckout(){
 		try{

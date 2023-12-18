@@ -1,7 +1,7 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import runner.RunCucumber;
 import support.Utils;
 
@@ -30,9 +30,11 @@ public class RegisterPage extends RunCucumber {
 	//Actions
 
 	/**
+	 * Validates if the register page is displayed by checking for specific text in the register form content.
 	 *
-	 * @param text
-	 * @return
+	 * @param text The expected text displayed on the register page.
+	 * @return {@code true} if the register page is displayed with the expected text,
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateTheRegisterPageDisplayed(String text){
 		try{
@@ -45,6 +47,13 @@ public class RegisterPage extends RunCucumber {
 		}
 	}
 
+	/**
+	 * Registers a new user with provided details.
+	 *
+	 * @param userNameId The username or user ID for the new user.
+	 * @return {@code true} if the new user is successfully registered with the provided details,
+	 *         otherwise {@code false}.
+	 */
 	public boolean userRegisterNewUser(String userNameId){
 		String randomEmail = utils.getRandomEmail();
 		try{

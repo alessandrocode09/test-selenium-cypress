@@ -1,7 +1,8 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.testng.Assert;
+
 import runner.RunCucumber;
 import support.Utils;
 
@@ -27,8 +28,10 @@ public class CheckoutPage extends RunCucumber {
 
 
 	/**
+	 * Validates the presence of the Payment Details page.
 	 *
-	 * @return
+	 * @return {@code true} if the Payment Details page is present with the expected title "Payment Details",
+	 *         otherwise {@code false}.
 	 */
 	public boolean validatePaymentDetailsPage(){
 		try{
@@ -42,9 +45,11 @@ public class CheckoutPage extends RunCucumber {
 	}
 
 	/**
+	 * Clicks on the "Ship to a Different Address" checkbox and continues.
 	 *
-	 * @param text
-	 * @return
+	 * @param text The text expected on the checkbox.
+	 * @return {@code true} if the checkbox is clicked and the continue button is successfully clicked,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickShipDifferentAddressCheckbox(String text){
 		try{
@@ -62,9 +67,11 @@ public class CheckoutPage extends RunCucumber {
 	}
 
 	/**
+	 * Validates the title of the Shipping Address.
 	 *
-	 * @param text
-	 * @return
+	 * @param text The expected text for the Shipping Address title.
+	 * @return {@code true} if the Shipping Address title matches the expected text,
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateShippingAddressTitle(String text){
 		try{
@@ -78,8 +85,10 @@ public class CheckoutPage extends RunCucumber {
 	}
 
 	/**
+	 * Updates the shipping address with a new address.
 	 *
-	 * @return
+	 * @return {@code true} if the new address is successfully entered and the continue button for shipping address is clicked,
+	 *         otherwise {@code false}.
 	 */
 	public boolean newAddressChange(){
 		try{
@@ -96,8 +105,10 @@ public class CheckoutPage extends RunCucumber {
 	}
 
 	/**
+	 * Clicks on the confirm button for order confirmation details.
 	 *
-	 * @return
+	 * @return {@code true} if the confirm button for order confirmation details is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickOnConfirmButton(){
 		try{
@@ -105,15 +116,17 @@ public class CheckoutPage extends RunCucumber {
 			getDriver().findElement(confirmButtonOrderConfirmDetails).click();
 			return true;
 		} catch (Exception e){
-			System.out.println("Couldn't type a new address" + e.getMessage());
+			System.out.println("Couldn't clicks on the confirm button" + e.getMessage());
 			return false;
 		}
 	}
 
 	/**
+	 * Validates the order submitted message.
 	 *
-	 * @param text
-	 * @return
+	 * @param text The expected text for the order submission confirmation message.
+	 * @return {@code true} if the order confirmation message matches the expected text,
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateOrderSubmittedMessage(String text){
 		try{
@@ -121,7 +134,7 @@ public class CheckoutPage extends RunCucumber {
 			Assert.assertEquals(getDriver().findElement(orderConfirmationMessage).getText(), text);
 			return true;
 		} catch (Exception e){
-			System.out.println("Couldn't validate the confirmation message" + e.getMessage());
+			System.out.println("Couldn't validate the order confirmation message" + e.getMessage());
 			return false;
 		}
 	}

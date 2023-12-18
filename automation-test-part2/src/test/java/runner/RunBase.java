@@ -15,6 +15,13 @@ public class RunBase {
 		return driver;
 	}
 
+	/**
+	 * Initializes and returns a WebDriver instance based on the specified browser.
+	 *
+	 * @param browser The browser type (e.g., "chrome", "firefox", "edge").
+	 * @return A WebDriver instance configured for the specified browser,
+	 *         or throws an IllegalArgumentException for unsupported browsers.
+	 */
 	public static WebDriver getDriver(String browser) {
 
 		if (driver !=  null) {

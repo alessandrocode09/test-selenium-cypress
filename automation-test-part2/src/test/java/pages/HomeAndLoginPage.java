@@ -1,7 +1,7 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import runner.RunCucumber;
 import support.Utils;
 
@@ -29,8 +29,10 @@ public class HomeAndLoginPage extends RunCucumber {
 	//Actions
 
 	/**
+	 * Accesses the application by opening it in the Chrome browser.
 	 *
-	 * @return
+	 * @return {@code true} if the application is accessed successfully in the Chrome browser,
+	 *         otherwise {@code false}.
 	 */
 	public boolean accessApp(){
 		try{
@@ -43,8 +45,10 @@ public class HomeAndLoginPage extends RunCucumber {
 	}
 
 	/**
-	 * Method is used to click on the "Sign In" link option from the home page.
-	 * @return [boolean] : True after be able to click and display the Login page
+	 * Clicks on the Sign In link.
+	 *
+	 * @return {@code true} if the Sign In link is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickSignInLink(){
 		try{
@@ -58,8 +62,11 @@ public class HomeAndLoginPage extends RunCucumber {
 	}
 
 	/**
-	 * Method is used to validate if the user is on the Sign In page, using the paragraph text from the Login form.
-	 * @return [boolean] : True if the text match and false if the text doesn't match
+	 * Validates if the sign-in text is displayed.
+	 *
+	 * @param text The expected text for the sign-in paragraph.
+	 * @return {@code true} if the sign-in paragraph text matches the expected text,
+	 *         otherwise {@code false}.
 	 */
 	public boolean signInTextDisplayed(String text){
 		try{
@@ -67,14 +74,16 @@ public class HomeAndLoginPage extends RunCucumber {
 			Assert.assertEquals(getDriver().findElement(loginParagraphText).getText(), text);
 			return true;
 		} catch (Exception e){
-			System.out.println("Couldn't validate the Login text" + e.getMessage());
+			System.out.println("Couldn't validate the Sign In text" + e.getMessage());
 			return false;
 		}
 	}
 
 	/**
+	 * Clicks on the "Register Now" link.
 	 *
-	 * @return
+	 * @return {@code true} if the "Register Now" link is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clickRegisterNowLink(){
 		try{
@@ -88,8 +97,10 @@ public class HomeAndLoginPage extends RunCucumber {
 	}
 
 	/**
+	 * Validates if a new user is successfully registered and on the Home screen.
 	 *
-	 * @return
+	 * @return {@code true} if the user is on the Home screen with the "Sign In" link displayed,
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateNewUserRegistered(){
 		try{
@@ -103,10 +114,12 @@ public class HomeAndLoginPage extends RunCucumber {
 	}
 
 	/**
+	 * Logs in a registered user with the provided username and password.
 	 *
-	 * @param username
-	 * @param password
-	 * @return
+	 * @param username The username of the registered user.
+	 * @param password The password of the registered user.
+	 * @return {@code true} if the registered user is logged in successfully using the provided credentials,
+	 *         otherwise {@code false}.
 	 */
 	public boolean loginRegisteredUser(String username, String password){
 		try{
@@ -118,14 +131,16 @@ public class HomeAndLoginPage extends RunCucumber {
 			getDriver().findElement(loginButton).click();
 			return true;
 		} catch (Exception e){
-			System.out.println("Couldn't click on the Register Now link" + e.getMessage());
+			System.out.println("Couldn't login the registered user on the application" + e.getMessage());
 			return false;
 		}
 	}
 
 	/**
+	 * Validates if the login is successful by checking for the presence of the "Sign Out" link.
 	 *
-	 * @return
+	 * @return {@code true} if the login is successful and the "Sign Out" link is present,
+	 *         otherwise {@code false}.
 	 */
 	public boolean validateLoginSuccessful(){
 		try{
@@ -140,8 +155,11 @@ public class HomeAndLoginPage extends RunCucumber {
 
 
 	/**
+	 * Enters text in the product search field.
 	 *
-	 * @return
+	 * @param text The text to be entered in the product search field.
+	 * @return {@code true} if the text is successfully entered in the search field,
+	 *         otherwise {@code false}.
 	 */
 	public boolean typesProductOnSearchField(String text){
 		try{
@@ -156,8 +174,10 @@ public class HomeAndLoginPage extends RunCucumber {
 	}
 
 	/**
+	 * Clicks on the search button.
 	 *
-	 * @return
+	 * @return {@code true} if the search button is clicked successfully,
+	 *         otherwise {@code false}.
 	 */
 	public boolean clicksOnSearchButton(){
 		try{
