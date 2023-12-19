@@ -37,8 +37,10 @@ You can see the test in cypress/e2e/booking-api/booking.cy.js
 - If you do not have installed, you can check here:
 Link: https://docs.cypress.io/guides/getting-started/installing-cypress
 
-- After cloning the repo into a directory run: "npm install cypress --save-dev" to install cypress in that directory context
+- After cloning the repo into a directory run: "npm-install" to install all dependencies
+- And "npm install cypress --save-dev" to install cypress in that directory context
 - To run the tests: "npx cypress run"
+- To check the cypress app run: "npx cypress open"
 
 - POST - Create a Token
 - POST - Create a Booking
