@@ -42,6 +42,7 @@ Link: https://docs.cypress.io/guides/getting-started/installing-cypress
 - To run the tests: "npx cypress run"
 - To check the cypress app run: "npx cypress open"
 
+All the https type and tests names:
 - POST - Create a Token
 - POST - Create a Booking
 - PATCH  - Partially Update the Created Booking
