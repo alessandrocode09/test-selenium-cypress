@@ -1,5 +1,5 @@
 # Test Example for Selenium and Cypress 
-This is a code challenge proposed by Korber Digital
+This is a portfolio for Selenium and Cypress frameworks
 
 ## webSeleniumCucumber
 After you clone this repository, to run the project "webSeleniumCucumber" you will need to install:
