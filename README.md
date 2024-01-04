@@ -1,17 +1,13 @@
-# test-korber
+# Test Example for Selenium and Cypress 
 This is a code challenge proposed by Korber Digital
 
-## TestPart1-blackboxTests
-The first part of the test is inside the zip file. 
-The zip file contains a Word document with the bug and images and contains also a folder with a video of the bug.
-
-## automation-test-part2
-After you clone this repository, to run the project "automation-test-part2" you will need to install:
+## webSeleniumCucumber
+After you clone this repository, to run the project "webSeleniumCucumber" you will need to install:
 - Java JDK version 8
 - Must have the Chrome browser installed (version 120.0.6099.109)
 - The Chrome drivers are on the "/src/java/drivers" directory
 - Depending on the Chrome browser version or OS, may not work. To check the following link for different chrome driver versions: https://chromedriver.chromium.org/downloads
-- You can see the test features on the: "/automation-test-part2/src/test/resources"
+- You can see the test features on the: "/webSeleniumCucumber/src/test/resources"
 - All tests for the project are in the "test" directory.
 
 How to run the tests?
@@ -19,7 +15,7 @@ How to run the tests?
 - On the terminal run the command line: "mvn clean install"
 - Run the tests: "mvn test -Dtest=RunCucumber"
 - After the test execution, run the report command: "mvn cluecumber-report:reporting"
-- The report is on the following path: "automation-test-part2/target/formated-report/index.html"
+- The report is on the following path: "webSeleniumCucumber/target/formated-report/index.html"
 
 The bug report screenshot for the first part:
 ![image](https://github.com/alessandrocode09/test-korber/assets/24464134/8c8ab3c6-af90-4f8c-86ee-75c42c622de6)
